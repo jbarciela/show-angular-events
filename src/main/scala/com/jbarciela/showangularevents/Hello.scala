@@ -12,7 +12,10 @@ object Hello {
     val listed = ls.rec! thedir |? (_.ext == "ts")
     listed.foreach( (f: ammonite.ops.Path) => {
       val emitLines = read.lines(f).filter(line => line.containsSlice("emit"))
-      println(emitLines)
+      emitLines.foreach( emitLine => {
+        println(f.name)
+        println(emitLine)
+      })
     })
     println(listed.size)
   }
