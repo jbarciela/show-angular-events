@@ -8,8 +8,9 @@ import ammonite.ops._
  * - unique list of event names
  * - association with file name
  * - add direction to sources
- * -- $emit sends messages up the scope chain
- * -- $broadcast sends messages down 
+ *     - $emit sends messages up the scope chain
+ *     - $broadcast sends messages down
+ * - remove hardcoded values! 
  */
 object Hello {
   
